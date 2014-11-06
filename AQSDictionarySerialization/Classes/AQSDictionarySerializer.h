@@ -25,6 +25,15 @@
 # pragma mark - Applying a patch represented as NSDictionary
 /** @name Applying a patch represented as NSDictionary */
 
+/**
+ *  Return an object that is applied a patch given in dictionary representation for given object.
+ *  **It apply some changes to given object.**
+ *
+ *  @param object     An object that conforms to `AQSDictionarySerialization`
+ *  @param dictionary A dictionary that represents a patch
+ *
+ *  @return An object that is applied a patch
+ */
 - (id<AQSDictionarySerialization>)patchAppliedObjectForObject:(NSObject<AQSDictionarySerialization> *)object
                                                withDictionary:(NSDictionary *)dictionary;
 
