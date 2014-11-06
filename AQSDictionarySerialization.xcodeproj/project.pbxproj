@@ -14,6 +14,10 @@
 		D451E7891A0B94A600D39316 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D451E7881A0B94A600D39316 /* Images.xcassets */; };
 		D451E78C1A0B94A600D39316 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D451E78A1A0B94A600D39316 /* LaunchScreen.xib */; };
 		D451E7981A0B94A600D39316 /* AQSDictionarySerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7971A0B94A600D39316 /* AQSDictionarySerializationTests.m */; };
+		D451E7A41A0B979200D39316 /* AQSDictionarySerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7A31A0B979200D39316 /* AQSDictionarySerializer.m */; };
+		D451E7A81A0B9AFC00D39316 /* NSDictionary+Inverse.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7A71A0B9AFC00D39316 /* NSDictionary+Inverse.m */; };
+		D451E7AA1A0B9DC000D39316 /* NSDictionaryInverseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7A91A0B9DC000D39316 /* NSDictionaryInverseTests.m */; };
+		D451E7AC1A0BA03400D39316 /* AQSDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7AB1A0BA03400D39316 /* AQSDictionarySerializerTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		D451E7911A0B94A600D39316 /* AQSDictionarySerializationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AQSDictionarySerializationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D451E7961A0B94A600D39316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D451E7971A0B94A600D39316 /* AQSDictionarySerializationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AQSDictionarySerializationTests.m; sourceTree = "<group>"; };
+		D451E7A21A0B979200D39316 /* AQSDictionarySerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSDictionarySerializer.h; sourceTree = "<group>"; };
+		D451E7A31A0B979200D39316 /* AQSDictionarySerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSDictionarySerializer.m; sourceTree = "<group>"; };
+		D451E7A51A0B987400D39316 /* AQSDictionarySerialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQSDictionarySerialization.h; sourceTree = "<group>"; };
+		D451E7A61A0B9AFC00D39316 /* NSDictionary+Inverse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Inverse.h"; sourceTree = "<group>"; };
+		D451E7A71A0B9AFC00D39316 /* NSDictionary+Inverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Inverse.m"; sourceTree = "<group>"; };
+		D451E7A91A0B9DC000D39316 /* NSDictionaryInverseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryInverseTests.m; sourceTree = "<group>"; };
+		D451E7AB1A0BA03400D39316 /* AQSDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSDictionarySerializerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				D451E7971A0B94A600D39316 /* AQSDictionarySerializationTests.m */,
+				D451E7AB1A0BA03400D39316 /* AQSDictionarySerializerTests.m */,
+				D451E7A91A0B9DC000D39316 /* NSDictionaryInverseTests.m */,
 				D451E7951A0B94A600D39316 /* Supporting Files */,
 			);
 			path = AQSDictionarySerializationTests;
@@ -123,6 +136,11 @@
 		D451E7A11A0B94BC00D39316 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D451E7A21A0B979200D39316 /* AQSDictionarySerializer.h */,
+				D451E7A31A0B979200D39316 /* AQSDictionarySerializer.m */,
+				D451E7A51A0B987400D39316 /* AQSDictionarySerialization.h */,
+				D451E7A61A0B9AFC00D39316 /* NSDictionary+Inverse.h */,
+				D451E7A71A0B9AFC00D39316 /* NSDictionary+Inverse.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -228,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D451E7841A0B94A600D39316 /* ViewController.m in Sources */,
+				D451E7A81A0B9AFC00D39316 /* NSDictionary+Inverse.m in Sources */,
+				D451E7A41A0B979200D39316 /* AQSDictionarySerializer.m in Sources */,
 				D451E7811A0B94A600D39316 /* AppDelegate.m in Sources */,
 				D451E77E1A0B94A600D39316 /* main.m in Sources */,
 			);
@@ -238,6 +258,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D451E7981A0B94A600D39316 /* AQSDictionarySerializationTests.m in Sources */,
+				D451E7AC1A0BA03400D39316 /* AQSDictionarySerializerTests.m in Sources */,
+				D451E7AA1A0B9DC000D39316 /* NSDictionaryInverseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
