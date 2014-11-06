@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BB2EACF5ABBB2F49B0DEA92 /* libPods-AQSDictionarySerializationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9692F409FD02714AB729A93 /* libPods-AQSDictionarySerializationTests.a */; };
 		D451E77E1A0B94A600D39316 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E77D1A0B94A600D39316 /* main.m */; };
 		D451E7811A0B94A600D39316 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7801A0B94A600D39316 /* AppDelegate.m */; };
 		D451E7841A0B94A600D39316 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7831A0B94A600D39316 /* ViewController.m */; };
@@ -31,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59AB08C819363D670546BEF8 /* Pods-AQSDictionarySerializationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQSDictionarySerializationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AQSDictionarySerializationTests/Pods-AQSDictionarySerializationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC5C2E9F739A4F6CA2393308 /* Pods-AQSDictionarySerializationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AQSDictionarySerializationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AQSDictionarySerializationTests/Pods-AQSDictionarySerializationTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9692F409FD02714AB729A93 /* libPods-AQSDictionarySerializationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AQSDictionarySerializationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D451E7781A0B94A600D39316 /* AQSDictionarySerialization.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AQSDictionarySerialization.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D451E77C1A0B94A600D39316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D451E77D1A0B94A600D39316 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,18 +69,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BB2EACF5ABBB2F49B0DEA92 /* libPods-AQSDictionarySerializationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		656DA5AE5D7C513DEF749555 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59AB08C819363D670546BEF8 /* Pods-AQSDictionarySerializationTests.debug.xcconfig */,
+				AC5C2E9F739A4F6CA2393308 /* Pods-AQSDictionarySerializationTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7407C487E7AC6069F925052 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9692F409FD02714AB729A93 /* libPods-AQSDictionarySerializationTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D451E76F1A0B94A600D39316 = {
 			isa = PBXGroup;
 			children = (
 				D451E77A1A0B94A600D39316 /* AQSDictionarySerialization */,
 				D451E7941A0B94A600D39316 /* AQSDictionarySerializationTests */,
 				D451E7791A0B94A600D39316 /* Products */,
+				656DA5AE5D7C513DEF749555 /* Pods */,
+				A7407C487E7AC6069F925052 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D451E79E1A0B94A700D39316 /* Build configuration list for PBXNativeTarget "AQSDictionarySerializationTests" */;
 			buildPhases = (
+				15403ACC3ABD15844F7ADE5C /* Check Pods Manifest.lock */,
 				D451E78D1A0B94A600D39316 /* Sources */,
 				D451E78E1A0B94A600D39316 /* Frameworks */,
 				D451E78F1A0B94A600D39316 /* Resources */,
+				004BAB289E451BE4EF15C192 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -239,6 +265,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		004BAB289E451BE4EF15C192 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AQSDictionarySerializationTests/Pods-AQSDictionarySerializationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		15403ACC3ABD15844F7ADE5C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D451E7741A0B94A600D39316 /* Sources */ = {
@@ -391,6 +450,7 @@
 		};
 		D451E79F1A0B94A700D39316 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59AB08C819363D670546BEF8 /* Pods-AQSDictionarySerializationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -410,6 +470,7 @@
 		};
 		D451E7A01A0B94A700D39316 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC5C2E9F739A4F6CA2393308 /* Pods-AQSDictionarySerializationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -442,6 +503,7 @@
 				D451E79D1A0B94A700D39316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D451E79E1A0B94A700D39316 /* Build configuration list for PBXNativeTarget "AQSDictionarySerializationTests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +512,7 @@
 				D451E7A01A0B94A700D39316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
