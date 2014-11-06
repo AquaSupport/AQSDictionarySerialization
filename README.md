@@ -12,7 +12,7 @@ AQSDictionarySerialization
 
 @end
 
-@implement Book
+@implementaion Book
 
 + (NSDictionary *)aqs_keyPathsByPropertyKey {
     return @{
