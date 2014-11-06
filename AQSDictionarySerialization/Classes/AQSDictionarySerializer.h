@@ -40,6 +40,13 @@
 # pragma mark - Obtaining NSDictionary Representation from an Object
 /** @name Obtaining NSDictionary Representation from an Object */
 
-- (NSDictionary *)dictionaryWithObject:(id<AQSDictionarySerialization>)object;
+/**
+ *  Return a serialized dictionary.
+ *
+ *  @param object An object that conforms to `AQSDictionarySerialization`
+ *
+ *  @return A serialized dictionary
+ */
+- (NSDictionary *)dictionaryWithObject:(NSObject<AQSDictionarySerialization> *)object;
 
 @end

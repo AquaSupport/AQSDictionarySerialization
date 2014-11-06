@@ -30,7 +30,7 @@
     [super tearDown];
 }
 
-- (void)testExample {
+- (void)testItApplyPatchForObjectWithDictionary {
     AQSBook *book = [[AQSBook alloc] init];
     NSDictionary *patch = @{
                             @"Title": @"sometitle",
@@ -40,6 +40,17 @@
     
     XCTAssertTrue([book.title isEqualToString:@"sometitle"]);
     XCTAssertTrue([book.authorName isEqualToString:@"someauthorname"]);
+}
+
+- (void)testItReturnsSerializedObjectInDictionary {
+    AQSBook *book = [[AQSBook alloc] init];
+    book.title = @"sometitle";
+    book.authorName = @"someauthorname";
+    
+    NSDictionary *dictionary = [[AQSDictionarySerializer serializer] dictionaryWithObject:book];
+    
+    XCTAssertTrue([dictionary[@"Title"] isEqualToString:@"sometitle"]);
+    XCTAssertTrue([dictionary[@"AuthorName"] isEqualToString:@"someauthorname"]);
 }
 
 @end

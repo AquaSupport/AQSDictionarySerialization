@@ -33,4 +33,15 @@
     return object;
 }
 
+- (NSDictionary *)dictionaryWithObject:(NSObject<AQSDictionarySerialization> *)object {
+    NSDictionary *keyPathsByPropertyKeyDictionary = [object aqs_keyPathsByPropertyKey];
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
+    for (NSString *propertyKey in keyPathsByPropertyKeyDictionary.allKeys) {
+        id value = [object valueForKey:propertyKey];
+        NSString *keyPath = keyPathsByPropertyKeyDictionary[propertyKey];
+        dictionary[keyPath] = value;
+    }
+    return dictionary;
+}
+
 @end
