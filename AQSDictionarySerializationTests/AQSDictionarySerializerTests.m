@@ -12,6 +12,7 @@
 
 #import "AQSDictionarySerialization.h"
 #import "AQSDictionarySerializer.h"
+#import "AQSBook.h"
 
 @interface AQSDictionarySerializerTests : XCTestCase
 
@@ -30,7 +31,15 @@
 }
 
 - (void)testExample {
+    AQSBook *book = [[AQSBook alloc] init];
+    NSDictionary *patch = @{
+                            @"Title": @"sometitle",
+                            @"AuthorName": @"someauthorname"
+                            };
+    [[AQSDictionarySerializer serializer] patchAppliedObjectForObject:book withDictionary:patch];
     
+    XCTAssertTrue([book.title isEqualToString:@"sometitle"]);
+    XCTAssertTrue([book.authorName isEqualToString:@"someauthorname"]);
 }
 
 @end

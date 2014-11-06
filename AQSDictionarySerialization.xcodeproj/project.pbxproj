@@ -19,6 +19,7 @@
 		D451E7A81A0B9AFC00D39316 /* NSDictionary+Inverse.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7A71A0B9AFC00D39316 /* NSDictionary+Inverse.m */; };
 		D451E7AA1A0B9DC000D39316 /* NSDictionaryInverseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7A91A0B9DC000D39316 /* NSDictionaryInverseTests.m */; };
 		D451E7AC1A0BA03400D39316 /* AQSDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7AB1A0BA03400D39316 /* AQSDictionarySerializerTests.m */; };
+		D451E7AF1A0BA2B700D39316 /* AQSBook.m in Sources */ = {isa = PBXBuildFile; fileRef = D451E7AE1A0BA2B700D39316 /* AQSBook.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		D451E7A71A0B9AFC00D39316 /* NSDictionary+Inverse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Inverse.m"; sourceTree = "<group>"; };
 		D451E7A91A0B9DC000D39316 /* NSDictionaryInverseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryInverseTests.m; sourceTree = "<group>"; };
 		D451E7AB1A0BA03400D39316 /* AQSDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSDictionarySerializerTests.m; sourceTree = "<group>"; };
+		D451E7AD1A0BA2B700D39316 /* AQSBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSBook.h; sourceTree = "<group>"; };
+		D451E7AE1A0BA2B700D39316 /* AQSBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSBook.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				D451E7AB1A0BA03400D39316 /* AQSDictionarySerializerTests.m */,
 				D451E7A91A0B9DC000D39316 /* NSDictionaryInverseTests.m */,
 				D451E7951A0B94A600D39316 /* Supporting Files */,
+				D451E7AD1A0BA2B700D39316 /* AQSBook.h */,
+				D451E7AE1A0BA2B700D39316 /* AQSBook.m */,
 			);
 			path = AQSDictionarySerializationTests;
 			sourceTree = "<group>";
@@ -316,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D451E7AF1A0BA2B700D39316 /* AQSBook.m in Sources */,
 				D451E7981A0B94A600D39316 /* AQSDictionarySerializationTests.m in Sources */,
 				D451E7AC1A0BA03400D39316 /* AQSDictionarySerializerTests.m in Sources */,
 				D451E7AA1A0B9DC000D39316 /* NSDictionaryInverseTests.m in Sources */,
