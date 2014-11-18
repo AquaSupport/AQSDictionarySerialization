@@ -38,6 +38,7 @@
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
     for (NSString *propertyKey in keyPathsByPropertyKeyDictionary.allKeys) {
         id value = [object valueForKey:propertyKey];
+        if (value == nil) { continue; }
         NSString *keyPath = keyPathsByPropertyKeyDictionary[propertyKey];
         dictionary[keyPath] = value;
     }
