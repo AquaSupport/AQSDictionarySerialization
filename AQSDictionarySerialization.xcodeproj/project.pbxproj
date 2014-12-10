@@ -58,6 +58,7 @@
 		D451E7AB1A0BA03400D39316 /* AQSDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSDictionarySerializerTests.m; sourceTree = "<group>"; };
 		D451E7AD1A0BA2B700D39316 /* AQSBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQSBook.h; sourceTree = "<group>"; };
 		D451E7AE1A0BA2B700D39316 /* AQSBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQSBook.m; sourceTree = "<group>"; };
+		D4607FCA1A3902450085A2D2 /* ADSDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ADSDebug.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 				D451E7A51A0B987400D39316 /* AQSDictionarySerialization.h */,
 				D451E7A61A0B9AFC00D39316 /* NSDictionary+Inverse.h */,
 				D451E7A71A0B9AFC00D39316 /* NSDictionary+Inverse.m */,
+				D4607FCA1A3902450085A2D2 /* ADSDebug.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -384,6 +386,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"ADS_DEBUG=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
