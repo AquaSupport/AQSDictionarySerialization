@@ -10,6 +10,7 @@
 
 #import "AQSDictionarySerialization.h"
 #import "NSDictionary+Inverse.h"
+#import "ADSDebug.h"
 
 @implementation AQSDictionarySerializer
 
@@ -27,7 +28,16 @@
     NSDictionary *propertyKeyByKeyPathDictionary = [keyPathsByPropertyKeyDictionary keyValueInversedDictionary];
     for (NSString *dictionaryKeyPath in dictionary.allKeys) {
         id value = dictionary[dictionaryKeyPath];
+        if (value == nil) { continue; }
         NSString *propertyKey = propertyKeyByKeyPathDictionary[dictionaryKeyPath];
+        if (propertyKey == nil) {
+            ADSLog(@"Cannot find property for %@", dictionaryKeyPath);
+            continue;
+        }
+        if ([keyPathsByPropertyKeyDictionary.allKeys containsObject:propertyKey] == NO) {
+            ADSLog(@"Cannot find keypath: %@ for the object.", propertyKey);
+            continue;
+        }
         [object setValue:value forKey:propertyKey];
     }
     return object;
@@ -38,7 +48,10 @@
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
     for (NSString *propertyKey in keyPathsByPropertyKeyDictionary.allKeys) {
         id value = [object valueForKey:propertyKey];
-        if (value == nil) { continue; }
+        if (value == nil) {
+            ADSLog(@"Value for key: %@ is nil!", propertyKey);
+            continue;
+        }
         NSString *keyPath = keyPathsByPropertyKeyDictionary[propertyKey];
         dictionary[keyPath] = value;
     }
