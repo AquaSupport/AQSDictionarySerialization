@@ -28,7 +28,10 @@
     NSDictionary *propertyKeyByKeyPathDictionary = [keyPathsByPropertyKeyDictionary keyValueInversedDictionary];
     for (NSString *dictionaryKeyPath in dictionary.allKeys) {
         id value = dictionary[dictionaryKeyPath];
-        if (value == nil) { continue; }
+        if (value == nil || [value isKindOfClass:[NSNull class]]) {
+            ADSLog(@"Value is nil for keypath %@. Skipped.", dictionaryKeyPath);
+            continue;
+        }
         NSString *propertyKey = propertyKeyByKeyPathDictionary[dictionaryKeyPath];
         if (propertyKey == nil) {
             ADSLog(@"Cannot find property for %@", dictionaryKeyPath);

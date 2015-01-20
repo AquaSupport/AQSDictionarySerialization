@@ -67,6 +67,18 @@
     XCTAssertNil(book.authorName);
 }
 
+- (void)testItApplyPatchForObjectWithDictionaryEvenIfNSNullIsIncluded {
+    AQSBook *book = [[AQSBook alloc] init];
+    NSDictionary *patch = @{
+                            @"Title": @"sometitle",
+                            @"AuthorName": [NSNull null]
+                            };
+    [[AQSDictionarySerializer serializer] patchAppliedObjectForObject:book withDictionary:patch];
+    
+    XCTAssertTrue([book.title isEqualToString:@"sometitle"]);
+    XCTAssertNil(book.authorName);
+}
+
 - (void)testItReturnsSerializedObjectInDictionary {
     AQSBook *book = [[AQSBook alloc] init];
     book.title = @"sometitle";
